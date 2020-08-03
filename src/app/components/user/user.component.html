@@ -1,0 +1,24 @@
+<div *ngIf="isEmptyTwitter(); else emptyBlock">
+  <div *ngFor="let item of twitter.twitter.search">
+    <div class="user__item">
+      <div class="user__logo" [ngSwitch]="item.user.profile_image_url">
+        <img *ngSwitchCase="item.user.profile_image_url.length" src="../assets/img/unknown-foto.jpg" alt="">
+        <img *ngSwitchDefault src="{{item.user.profile_image_url}}">
+      </div>
+      <div class="user__description">
+        <div class="user__title">
+          <span class="title-h4">{{item.user.name}}</span>
+          <span class="txt-sm">@{{item.user.screen_name}}	&middot; {{item.created_at | date}}</span>
+        </div>
+        <p class="txt-md">{{item.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyBlock>
+  <div class="user__list">
+    <img src="../assets/img/empty-list.svg" alt="empty list">
+    <p class="txt-lg">Your collection list is empty!</p>
+  </div>
+</ng-template>

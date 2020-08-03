@@ -1,0 +1,10 @@
+<div class="search">
+  <mat-form-field appearance="fill">
+    <mat-label>Search of questions</mat-label>
+    <input matInput [(ngModel)]="title" (keyup)="doRequest()" placeholder="Search">
+  </mat-form-field>
+</div>
+
+<div class="search__list">
+  <app-user [twitter]="arrTweets" [ready]="ready"></app-user>
+</div>

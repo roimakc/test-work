@@ -1,0 +1,26 @@
+@import "fonts";
+
+$font-base-o: 'robotoregular';
+$font-medium-o: 'robotomedium';
+$font-bold-o: 'robotobold';
+
+$white: #fff;
+$black: #0e0e0e;
+$lightGray: #8c9aa5;
+$gray: #373737;
+$darkGray: #262626;
+$red: #F60011;
+
+:root {
+  --font-base: #{$font-base-o};
+  --font-medium: #{$font-medium-o};
+  --font-bold: #{$font-bold-o};
+
+  --white: #{$white};
+  --black: #{$black};
+
+  --lightGray: #{$lightGray};
+  --gray: #{$gray};
+  --darkGray: #{$darkGray};
+  --red: #{$red};
+}
